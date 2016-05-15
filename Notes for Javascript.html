@@ -10,57 +10,70 @@
             font-size: 14px;
         }
     </style>
+      //Fuction create two add two numbers and global variable declare
+    <script>
+        var x = 10;
+        var y = 22;
+
+        function Add() {
+            var z = x + y;
+            console.log(z);
+        }
+
+        //Fuction create two add two numbers and private variable declare
+
+        (function () {
+            var x = 10;
+            var y = 22;
+
+            function Add() {
+                var z = x + y;
+                return z;
+                console.log(z);
+            };
+
+        }());
+
+        (function () {
+            var x = 10;
+            var y = 22;
+
+            function Minus() {
+                var z = y - x;
+                return z;
+                console.log(z);
+            };
+
+        }());
+
+
+        //function to calculate salary with private variable declaration
+
+        (function () {
+            var bsal = 1000000;
+
+            function salcal(workedhours) {
+                worked = workedhours || 10;
+                return bsal * workedhours;
+            };
+            console.log(salcal(11));
+        }());
+
+        //function - const variable and variable it will throw error : Identifier 'PI' has already been declared(…) 
+        (function () {
+            const PI = 3.14;
+
+            function calculatePI() {
+                var PI = 3.3; // we have to remove this declaration
+                console.log(PI);
+            }
+        }());
+    </script>
+
 </head>
 
 <body>
 
-//Fuction create two add two numbers and global variable declare
-
-var x = 10; var y = 22;
- function Add()
- {
- var z = x+y;
- console.log(z);
- }
- 
- //Fuction create two add two numbers and private variable declare
-      
-       (function(){
-       var x = 10; var y = 22;
- function Add()
- {
- var z = x+y;
- return z;
-  console.log(z);
- };
-
- }());
-       
-       (function(){
-       var x = 10; var y = 22;
- function Minus()
- {
- var z = y-x;
- return z;
-  console.log(z);
- };
-
- }());
-       
-       
- //function to calculate salary with private variable declaration
-      
-       (function ()
-       {
-       var bsal=1000000;
-       function salcal(workedhours)
-       {
-       worked = workedhours || 10;
-       return bsal*workedhours;
-       };
-       console.log(salcal(11));
-       }());
-       
-  </body>
+    </body>
 
 </html>
